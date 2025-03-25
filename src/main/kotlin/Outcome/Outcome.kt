@@ -45,3 +45,12 @@ fun <T> catches(f: () -> T): Outcome<OutcomeError, T> =
       override val msg: String = e.message ?: "An error occurred"
     })
   }
+
+fun<T> T.combine(other: Holder<T>, f: (T, T) -> T): Holder<T> =
+  // Holder 생성자 안쓰고 Functor 조합
+  other.map { f(this, it) }
+//  Holder(f(this, other.value))
+
+class Holder<T>(val value: T) {
+  fun <U> map(f: (T) -> U): Holder<U> = Holder(f(value))
+}

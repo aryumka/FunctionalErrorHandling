@@ -2,7 +2,7 @@ package either
 
 import arrow.core.Either
 import arrow.core.raise.either
-import option.insuranceRateQuote
+import aryumka.option.domain.insuranceRateQuote
 
 
 fun String.parseToInt(): Either<Throwable, Int> =

@@ -2,6 +2,7 @@ package option
 
 import aryumka.option.Option
 import aryumka.option.catches
+import aryumka.option.domain.insuranceRateQuote
 import aryumka.option.map2
 
 fun parseInsuranceRateQuote(
@@ -17,7 +18,3 @@ fun parseInsuranceRateQuote(
   }
 }
 
-fun insuranceRateQuote(
-  age: Int,
-  speedingTickets: Int
-): Double = TODO()

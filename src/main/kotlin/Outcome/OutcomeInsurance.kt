@@ -1,6 +1,7 @@
 package aryumka.option.Outcome
 
-import option.insuranceRateQuote
+import aryumka.option.domain.insuranceRateQuote
+
 
 fun String.parseToInt(): Outcome<OutcomeError, Int> =
   catches { this.toInt() }
